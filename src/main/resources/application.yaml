@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    reader:
+      username: admin
+      password: [your_password]
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://your_reader_url:3306/commentdb?serverTimezone=Australia/Sydney&useUnicode=true@characterEncoding=utf-8
+      pattern: get*,find*
+    writer:
+      username: admin
+      password: [your_password]
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://your_writer_url:3306/commentdb?serverTimezone=Australia/Sydney&useUnicode=true@characterEncoding=utf-8
+      pattern: add*,update*
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8080
+
+
